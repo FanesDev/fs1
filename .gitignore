@@ -1,0 +1,20 @@
+### Diretórios ###
+vendor/
+node_modules/
+/public/storage
+bootstrap/cache/
+
+### Arquivos ###
+.env/
+
+### Globs ###
+*.zip
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
