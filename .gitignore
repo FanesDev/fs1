@@ -5,7 +5,7 @@ node_modules/
 bootstrap/cache/
 
 ### Arquivos ###
-.env/
+.env
 
 ### Globs ###
 *.zip
