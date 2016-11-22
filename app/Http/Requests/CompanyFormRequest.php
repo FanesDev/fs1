@@ -24,8 +24,10 @@ class CompanyFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'fantasy_name'  => 'required|max:50',
-            'cnpj'        => 'required|min:14|max:14|unique:companies,cnpj',
+            'company_name'       => 'required|max:50',
+            'fantasy_name'       => 'required|max:50',
+            'cnpj'               => 'required|min:14|max:14',
+            'state_registration' => 'required|min:9|max:12',
         ];
     }
 }

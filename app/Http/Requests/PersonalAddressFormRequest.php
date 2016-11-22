@@ -30,7 +30,7 @@ class PersonalAddressFormRequest extends FormRequest
             'logradouto'         => 'min:5|max:50',
             'neighborhood'        => 'required|min:4|max:50',
             'number'        => 'required|min:1|max:10',
-            'cep'        => 'required|min:8|max:8',
+            'cep'        => 'min:8|max:8',
             'complement'        => 'required|min:4|max:100',
         ];
     }

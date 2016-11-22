@@ -21,6 +21,12 @@
                             </div>
                         </div>
                        <div class="form-group">
+                            <label for="company_name" class="col-sm-2 control-label">Razão social:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="company_name" value="{{ $company->company_name }}" readonly>
+                            </div>
+                        </div>
+                       <div class="form-group">
                             <label for="fantasy_name" class="col-sm-2 control-label">Nome fantasia:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="fantasy_name" value="{{ $company->fantasy_name }}" readonly>
@@ -30,6 +36,12 @@
                             <label for="cnpj" class="col-sm-2 control-label">CNPJ:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="cnpj" value="{{ $company->cnpj }}" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state_registration" class="col-sm-2 control-label">Inscrição estatual:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="state_registration" value="{{ $company->state_registration }}" readonly>
                             </div>
                         </div>
                        <div class="form-group text-center">

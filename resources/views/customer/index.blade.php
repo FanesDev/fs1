@@ -17,8 +17,7 @@
                             <th> ID            </th>
                             <th> Cliente       </th>
                             <th> Tipo          </th>
-                            <th> Desde         </th>
-                            <th> Última Compra </th>
+                            <th> Cliente desde </th>
                             <th> &nbsp         </th>
                             <th> &nbsp         </th>
                         </tr>
@@ -28,7 +27,6 @@
                                 <td>{{ $customer->client_id }}</td>
                                 <td>{{ $customer->client_type }}</td>
                                 <td>{{ $customer->customer_since }}</td>
-                                <td>{{ $customer->last_purchase }}</td>
                                 <td>
                                     <a href="{{ url('clientes/'.$customer->id) }}" class="btn btn-primary btn-xs">Exibir</a>
                                 </td>

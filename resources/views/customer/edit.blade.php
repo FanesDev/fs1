@@ -39,12 +39,6 @@
                                 <input type="date" class="form-control" name="customer_since" value="{{ $customer->customer_since }}" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="last_purchase" class="col-sm-2 control-label">Última compra:</label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control" name="last_purchase" value="{{ $customer->last_purchase }}">
-                            </div>
-                        </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-success">Alterar</button>
                             <a href="{{ url('clientes') }} " class="btn btn-default">Cancelar</a>

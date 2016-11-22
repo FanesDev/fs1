@@ -40,7 +40,6 @@ class CustomerController extends Controller
         $customer->client_id      = $request->get('client_id');
         $customer->client_type    = $request->get('client_type');
         $customer->customer_since = $request->get('customer_since');
-        $customer->last_purchase  = $request->get('last_purchase');
         $customer->save();
 
         return redirect('/clientes');
@@ -78,12 +77,11 @@ class CustomerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(CustomerFormRequest $request, $id){
-        $customer = Person::findOrFail($id);
-        $customer->client_id = $request->get('client_id');
-        $customer->client_type  = $request->get('client_type');
-        $customer->customer_since        = $request->get('customer_since');
-        $customer->last_purchase         = $request->get('last_purchase');
-        $customer->save();
+        $customer = Customer::findOrFail($id);
+        $customer->client_id      = $request->get('client_id');
+        $customer->client_type    = $request->get('client_type');
+        $customer->customer_since = $request->get('customer_since');
+		$customer->save();
 
         return redirect('/clientes');
     }

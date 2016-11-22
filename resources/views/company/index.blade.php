@@ -14,17 +14,21 @@
                 <div class="table-responsive">
                     <table class="table table-condensed table-hover table-striped">
                         <tr class="warning">
-                            <th> ID            </th>
-                            <th> Nome Fantasia </th>
-                            <th> CNPJ          </th>
-                            <th> &nbsp         </th>
-                            <th> &nbsp         </th>
+                            <th> ID                </th>
+                            <th> Nome Fantasia     </th>
+                            <th> Razão Social      </th>
+                            <th> CNPJ              </th>
+                            <th> Inscrição Estadual</th>
+                            <th> &nbsp             </th>
+                            <th> &nbsp             </th>
                         </tr>
                         @foreach($companies as $company)
                             <tr>
                                 <td>{{ $company->id }}</td>
+                                <td>{{ $company->company_name }}</td>
                                 <td>{{ $company->fantasy_name }}</td>
                                 <td>{{ $company->cnpj }}</td>
+                                <td>{{ $company->state_registration }}</td>
                                 <td>
                                     <a href="{{ url('empresas/'.$company->id) }}" class="btn btn-primary btn-xs">Exibir</a>
                                 </td>

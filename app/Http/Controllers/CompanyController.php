@@ -38,9 +38,11 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(CompanyFormRequest $request){
-        $company               = new Company;
-        $company->fantasy_name = $request->get('fantasy_name');
-        $company->cnpj         = $request->get('cnpj');
+        $company = new Company;
+        $company->company_name       = $request->get('company_name');
+        $company->fantasy_name       = $request->get('fantasy_name');
+        $company->cnpj               = $request->get('cnpj');
+        $company->state_registration = $request->get('state_registration');
         $company->save();
 
         return redirect('/empresas');
@@ -78,9 +80,11 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(CompanyFormRequest $request, $id){
-        $company               = Company::findOrFail($id);
-        $company->fantasy_name = $request->get('fantasy_name');
-        $company->cnpj         = $request->get('cnpj');
+        $company = Company::findOrFail($id);
+        $company->company_name       = $request->get('company_name');
+        $company->fantasy_name       = $request->get('fantasy_name');
+        $company->cnpj               = $request->get('cnpj');
+        $company->state_registration = $request->get('state_registration');
         $company->save();
 
         return redirect('/empresas');
