@@ -87,13 +87,13 @@ class PersonalAddressController extends Controller{
     public function update(PersonalAddressFormRequest $request, $id)
     {
         $personalAddress = PersonalAddress::findOrFail($id);
-        $personalAddress->people_id = $request->get('people_id');
-        $personalAddress->state  = $request->get('state');
-        $personalAddress->logradouro        = $request->get('logradouro');
-        $personalAddress->neighborhood         = $request->get('neighborhood');
-        $personalAddress->number        = $request->get('number');
-        $personalAddress->cep        = $request->get('cep');
-        $personalAddress->complement        = $request->get('complement');
+        $personalAddress->people_id    = $request->get('people_id');
+        $personalAddress->state        = $request->get('state');
+        $personalAddress->logradouro   = $request->get('logradouro');
+        $personalAddress->neighborhood = $request->get('neighborhood');
+        $personalAddress->number       = $request->get('number');
+        $personalAddress->cep          = $request->get('cep');
+        $personalAddress->complement   = $request->get('complement');
         $personalAddress->save();
 
         return redirect('/enderecos_pessoais');

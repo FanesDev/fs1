@@ -37,3 +37,7 @@ Route::resource('emails_corporativos', 'BusinessEmailController');
 
 Route::resource('clientes', 'CustomerController');
 
+Route::resource('enderecos_corporativos', 'BusinessAddressController');
+
+Route::resource('telefones_corporativos', 'BusinessPhoneController');
+

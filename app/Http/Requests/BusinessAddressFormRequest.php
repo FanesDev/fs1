@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PersonalAddressFormRequest extends FormRequest
+class BusinessAddressFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class PersonalAddressFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'people_id' => 'required|max:32',
+            'companies_id' => 'required|max:32',
             'state'  => 'required|min:2|max:2',
             'city'        => 'required|min:4|max:50',
             'logradouto'         => 'min:5|max:50',

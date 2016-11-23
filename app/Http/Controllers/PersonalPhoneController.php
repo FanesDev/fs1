@@ -83,6 +83,7 @@ class PersonalPhoneController extends Controller{
         $personalPhone                 = PersonalContact::findOrFail($id);
         $personalPhone->people_id      = $request->get('people_id');
         $personalPhone->phone_operator = $request->get('phone_operator');
+        $personalPhone->ddd            = $request->get('ddd');
         $personalPhone->phone          = $request->get('phone');
         $personalPhone->save();
 
