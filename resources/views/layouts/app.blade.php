@@ -69,6 +69,7 @@
                                     <li><a href="{{ url('/emails_corporativos') }}">Emails Corporativos</a></li>
                                     <li><a href="{{ url('/enderecos_corporativos') }}">Endereços Corporativos</a></li>
                                     <li><a href="{{ url('/telefones_corporativos') }}">Telefones Corporativos</a></li>
+                                    <li><a href="{{ url('/suplementos_corporativos') }}">Suplementos Corporativos</a></li>
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                                 </ul>
                             </li>

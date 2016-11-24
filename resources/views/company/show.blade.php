@@ -21,17 +21,17 @@
                             </div>
                         </div>
                        <div class="form-group">
-                            <label for="company_name" class="col-sm-2 control-label">Razão social:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="company_name" value="{{ $company->company_name }}" readonly>
-                            </div>
-                        </div>
-                       <div class="form-group">
                             <label for="fantasy_name" class="col-sm-2 control-label">Nome fantasia:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="fantasy_name" value="{{ $company->fantasy_name }}" readonly>
                             </div>
                         </div>
+                       <div class="form-group">
+                            <label for="legal_name" class="col-sm-2 control-label">Razão social:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="legal_name" value="{{ $company->legal_name }}" readonly>
+                            </div>
+                       </div>
                         <div class="form-group">
                             <label for="cnpj" class="col-sm-2 control-label">CNPJ:</label>
                             <div class="col-sm-10">

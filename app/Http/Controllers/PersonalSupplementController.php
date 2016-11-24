@@ -38,10 +38,10 @@ class PersonalSupplementController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(PersonalSupplementFormRequest $request){
-        $personalSupplements= new PersonalSupplement;
-        $personalSupplements->people_id = $request->get('people_id');
-        $personalSupplements->supplement_name  = $request->get('supplement_name');
-        $personalSupplements->supplement  = $request->get('supplement');
+        $personalSupplements = new PersonalSupplement;
+        $personalSupplements->people_id       = $request->get('people_id');
+        $personalSupplements->supplement_name = $request->get('supplement_name');
+        $personalSupplements->supplement      = $request->get('supplement');
         $personalSupplements->save();
 
         return redirect('/suplementos_pessoais');
@@ -79,7 +79,7 @@ class PersonalSupplementController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(PersonalSupplementFormRequest $request, $id){
-        $personalSupplement                  = PersonalSupplement::findOrFail($id);
+        $personalSupplement = PersonalSupplement::findOrFail($id);
         $personalSupplement->people_id       = $request->get('people_id');
         $personalSupplement->supplement_name = $request->get('supplement_name');
         $personalSupplement->supplement      = $request->get('supplement');

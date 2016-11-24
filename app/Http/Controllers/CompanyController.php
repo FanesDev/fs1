@@ -39,7 +39,7 @@ class CompanyController extends Controller
      */
     public function store(CompanyFormRequest $request){
         $company = new Company;
-        $company->company_name       = $request->get('company_name');
+        $company->legal_name         = $request->get('legal_name');
         $company->fantasy_name       = $request->get('fantasy_name');
         $company->cnpj               = $request->get('cnpj');
         $company->state_registration = $request->get('state_registration');
@@ -81,7 +81,7 @@ class CompanyController extends Controller
      */
     public function update(CompanyFormRequest $request, $id){
         $company = Company::findOrFail($id);
-        $company->company_name       = $request->get('company_name');
+        $company->legal_name         = $request->get('legal_name');
         $company->fantasy_name       = $request->get('fantasy_name');
         $company->cnpj               = $request->get('cnpj');
         $company->state_registration = $request->get('state_registration');

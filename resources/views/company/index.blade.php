@@ -25,8 +25,8 @@
                         @foreach($companies as $company)
                             <tr>
                                 <td>{{ $company->id }}</td>
-                                <td>{{ $company->company_name }}</td>
                                 <td>{{ $company->fantasy_name }}</td>
+                                <td>{{ $company->legal_name }}</td>
                                 <td>{{ $company->cnpj }}</td>
                                 <td>{{ $company->state_registration }}</td>
                                 <td>
