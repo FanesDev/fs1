@@ -73,6 +73,7 @@
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                                     <li><a href="{{ url('/fornecedores') }}">Fornecedores</a></li>
                                     <li><a href="{{ url('/produtos') }}">Produtos</a></li>
+                                    <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                 </ul>
                             </li>
 

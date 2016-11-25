@@ -47,3 +47,5 @@ Route::resource('fornecedores', 'SupplierController');
 
 Route::resource('produtos', 'ProductController');
 
+Route::resource('produtos_fornecidos', 'SuppliedProductController');
+
