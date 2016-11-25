@@ -45,3 +45,5 @@ Route::resource('suplementos_corporativos', 'BusinessSupplementController');
 
 Route::resource('fornecedores', 'SupplierController');
 
+Route::resource('produtos', 'ProductController');
+

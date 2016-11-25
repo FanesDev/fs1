@@ -72,6 +72,7 @@
                                     <li><a href="{{ url('/suplementos_corporativos') }}">Suplementos Corporativos</a></li>
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                                     <li><a href="{{ url('/fornecedores') }}">Fornecedores</a></li>
+                                    <li><a href="{{ url('/produtos') }}">Produtos</a></li>
                                 </ul>
                             </li>
 

@@ -38,7 +38,7 @@ class BusinessContactController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(BusinessContactFormRequest $request){
-        $businessContact               = new BusinessContact;
+        $businessContact = new BusinessContact;
         $businessContact->companies_id = $request->get('companies_id');
         $businessContact->people_id    = $request->get('people_id');
         $businessContact->save();
@@ -78,7 +78,7 @@ class BusinessContactController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(BusinessContactFormRequest $request, $id){
-        $businessContact               = BusinessContact::findOrFail($id);
+        $businessContact = BusinessContact::findOrFail($id);
         $businessContact->companies_id = $request->get('companies_id');
         $businessContact->people_id    = $request->get('people_id');
         $businessContact->save();
