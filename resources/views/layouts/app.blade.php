@@ -71,6 +71,7 @@
                                     <li><a href="{{ url('/telefones_corporativos') }}">Telefones Corporativos</a></li>
                                     <li><a href="{{ url('/suplementos_corporativos') }}">Suplementos Corporativos</a></li>
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
+                                    <li><a href="{{ url('/fornecedores') }}">Fornecedores</a></li>
                                 </ul>
                             </li>
 

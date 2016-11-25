@@ -42,3 +42,6 @@ Route::resource('enderecos_corporativos', 'BusinessAddressController');
 Route::resource('telefones_corporativos', 'BusinessPhoneController');
 
 Route::resource('suplementos_corporativos', 'BusinessSupplementController');
+
+Route::resource('fornecedores', 'SupplierController');
+
