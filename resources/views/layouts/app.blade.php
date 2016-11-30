@@ -76,6 +76,7 @@
                                     <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                     <li><a href="{{ url('/colaboradores') }}">Colaboradores</a></li>
                                     <li><a href="{{ url('/ordens_compra') }}">Orderns de Compra</a></li>
+                                    <li><a href="{{ url('/nfs_compra') }}">NFs de Compra</a></li>
                                 </ul>
                             </li>
 

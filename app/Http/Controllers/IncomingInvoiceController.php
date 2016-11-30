@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\IncomingInvoice;
 
+use App\Http\Requests\IncomingInvoiceFormRequest;
+
 class IncomingInvoiceController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class IncomingInvoiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        //
+        $incomingInvoices = IncomingInvoice::paginate(10);
+        return view('incoming_invoice.index')->with('incomingInvoices', $incomingInvoices);
     }
 
     /**
@@ -23,7 +26,7 @@ class IncomingInvoiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        //
+       return view('incoming_invoice.create');
     }
 
     /**
@@ -32,8 +35,13 @@ class IncomingInvoiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
-        //
+    public function store(IncomingInvoiceFormRequest $request){
+        $incomingInvoice = new Person;
+        $incomingInvoice->number = $request->get('number');
+        $incomingInvoice->maturity = $request->get('maturity');
+        $incomingInvoice->save();
+
+        return redirect('/nfs_compra');
     }
 
     /**
@@ -43,7 +51,9 @@ class IncomingInvoiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id){
-        //
+        $incomingInvoice = IncomingInvoice::findOrFail($id);
+     
+        return view('incoming_invoice.show')->with('incomingInvoice', $incomingInvoice);
     }
 
     /**
@@ -53,7 +63,9 @@ class IncomingInvoiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id){
-        //
+        $incomingInvoice = IncomingInvoice::findOrFail($id);
+         
+        return view('incoming_invoice.edit')->with('incomingInvoice', $incomingInvoice);
     }
 
     /**
@@ -63,8 +75,13 @@ class IncomingInvoiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
-        //
+    public function update(IncomingInvoiceFormRequest $request, $id){
+        $incomingInvoice = IncomingInvoice::findOrFail($id);
+        $incomingInvoice->number = $request->get('number');
+        $incomingInvoice->maturity = $request->get('maturity');
+        $incomingInvoice->save();
+
+        return redirect('/nfs_compra');
     }
 
     /**
@@ -74,7 +91,11 @@ class IncomingInvoiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
-        //
+        $incomingInvoice = IncomingInvoice::findOrFail($id);
+        $incomingInvoice->delete();
+
+        return redirect('/nfs_compra');
     }
 }
+
 

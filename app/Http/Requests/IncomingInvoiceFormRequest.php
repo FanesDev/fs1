@@ -13,7 +13,7 @@ class IncomingInvoiceFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return \Auth::check();
     }
 
     /**
@@ -24,7 +24,8 @@ class IncomingInvoiceFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'number'   => 'required|max:32',
+            'maturity' => 'required|date',
         ];
     }
 }

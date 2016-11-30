@@ -53,3 +53,5 @@ Route::resource('colaboradores', 'EmployeeController');
 
 Route::resource('ordens_compra', 'PurchaseOrderController');
 
+Route::resource('nfs_compra', 'IncomingInvoiceController');
+
