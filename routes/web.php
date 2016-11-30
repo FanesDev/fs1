@@ -51,3 +51,5 @@ Route::resource('produtos_fornecidos', 'SuppliedProductController');
 
 Route::resource('colaboradores', 'EmployeeController');
 
+Route::resource('ordens_compra', 'PurchaseOrderController');
+

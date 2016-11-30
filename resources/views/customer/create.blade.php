@@ -16,7 +16,7 @@
                         <div class="form-group">
                             <label for="client_id" class="col-sm-2 control-label">Cliente:</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" name="client_id" value="{{ old('client_id') }}" required>
+                                <input type="number" class="form-control" name="client_id" value="{{ old('client_id') }}" maxlength="32" required>
                             </div>
                         </div>
                         <div class="form-group">
