@@ -14,16 +14,18 @@
                 <div class="table-responsive">
                     <table class="table table-condensed table-hover table-striped">
                         <tr class="warning">
-                            <th> ID      </th>
-                            <th> Empresa </th>
-                            <th> Contato </th>
-                            <th> &nbsp   </th>
-                            <th> &nbsp   </th>
+                            <th> ID        </th>
+                            <th> NOme      </th>
+                            <th> Preço     </th>
+                            <th> Descrição </th>
+                            <th> &nbsp     </th>
+                            <th> &nbsp     </th>
                         </tr>
                         @foreach($products as $product)
                             <tr>
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->name }}</td>
+                                <td>{{ $product->unit_price }}</td>
                                 <td>{{ $product->description }}</td>
                                 <td>
                                     <a href="{{ url('produtos/'.$product->id) }}" class="btn btn-primary btn-xs">Exibir</a>

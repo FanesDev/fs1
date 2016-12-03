@@ -20,7 +20,6 @@
                             <th> Data da entrega    </th>
                             <th> Forma de pagamento </th>
                             <th> Total              </th>
-                            <th> Nota de entrada    </th>
                             <th> Estatus            </th>
                             <th> &nbsp              </th>
                             <th> &nbsp              </th>
@@ -33,7 +32,6 @@
                                 <td>{{ $purchaseOrder->delivery_date }}</td>
                                 <td>{{ $purchaseOrder->form_payment }}</td>
                                 <td>{{ $purchaseOrder->total_value }}</td>
-                                <td>{{ $purchaseOrder->incoming_invoices_id }}</td>
                                 <td>{{ $purchaseOrder->status }}</td>
                                 <td>
                                     <a href="{{ url('ordens_compra/'.$purchaseOrder->id) }}" class="btn btn-primary btn-xs">Exibir</a>

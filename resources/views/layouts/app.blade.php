@@ -77,6 +77,20 @@
                                     <li><a href="{{ url('/colaboradores') }}">Colaboradores</a></li>
                                     <li><a href="{{ url('/ordens_compra') }}">Orderns de Compra</a></li>
                                     <li><a href="{{ url('/nfs_compra') }}">NFs de Compra</a></li>
+                                    <li><a href="{{ url('/produtos_comprados') }}">Produtos Comprados</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    &nbsp Financeiro<span class="caret"></span>
+                                </a>
+     
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/receitas') }}">Receiras</a></li>
+                                    <li><a href="{{ url('/despesas') }}">Despesas</a></li>
+                                    <li><a href="{{ url('/contas_receber') }}">Contas a Receber</a></li>
+                                    <li><a href="{{ url('/contas_pagar') }}">Contas a Pagar</a></li>
                                 </ul>
                             </li>
 

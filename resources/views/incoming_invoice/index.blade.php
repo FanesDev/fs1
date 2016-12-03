@@ -14,15 +14,17 @@
                 <div class="table-responsive">
                     <table class="table table-condensed table-hover table-striped">
                         <tr class="warning">
-                            <th> ID         </th>
-                            <th> Número     </th>
-                            <th> Vencimento </th>
-                            <th> &nbsp      </th>
-                            <th> &nbsp      </th>
+                            <th> ID              </th>
+                            <th> Ordem de Compra </th>
+                            <th> Número          </th>
+                            <th> Vencimento      </th>
+                            <th> &nbsp           </th>
+                            <th> &nbsp           </th>
                         </tr>
                         @foreach($incomingInvoices as $incomingInvoice)
                             <tr>
                                 <td>{{ $incomingInvoice->id }}</td>
+                                <td>{{ $incomingInvoice->purchase_orders_id }}</td>
                                 <td>{{ $incomingInvoice->number }}</td>
                                 <td>{{ $incomingInvoice->maturity }}</td>
                                 <td>

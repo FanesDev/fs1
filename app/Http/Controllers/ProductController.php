@@ -38,6 +38,7 @@ class ProductController extends Controller
     public function store(ProductFormRequest $request){
         $product = new Product;
         $product->name        = $request->get('name');
+        $product->unit_price  = $request->get('unit_price');
         $product->description = $request->get('description');
         $product->save();
 
@@ -78,6 +79,7 @@ class ProductController extends Controller
     public function update(ProductFormRequest $request, $id){
         $product = Product::findOrFail($id);
         $product->name        = $request->get('companies_id');
+        $product->unit_price  = $request->get('unit_price');
         $product->description = $request->get('people_id');
         $product->save();
 

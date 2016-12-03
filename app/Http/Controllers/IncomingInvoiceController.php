@@ -37,8 +37,9 @@ class IncomingInvoiceController extends Controller
      */
     public function store(IncomingInvoiceFormRequest $request){
         $incomingInvoice = new Person;
-        $incomingInvoice->number = $request->get('number');
-        $incomingInvoice->maturity = $request->get('maturity');
+        $incomingInvoice->purchase_orders_id = $request->get('purchase_orders_id');
+        $incomingInvoice->number             = $request->get('number');
+        $incomingInvoice->maturity           = $request->get('maturity');
         $incomingInvoice->save();
 
         return redirect('/nfs_compra');
@@ -77,7 +78,8 @@ class IncomingInvoiceController extends Controller
      */
     public function update(IncomingInvoiceFormRequest $request, $id){
         $incomingInvoice = IncomingInvoice::findOrFail($id);
-        $incomingInvoice->number = $request->get('number');
+        $incomingInvoice->purchase_orders_id = $request->get('purchase_orders_id');
+        $incomingInvoice->number   = $request->get('number');
         $incomingInvoice->maturity = $request->get('maturity');
         $incomingInvoice->save();
 
@@ -97,5 +99,4 @@ class IncomingInvoiceController extends Controller
         return redirect('/nfs_compra');
     }
 }
-
 

@@ -55,3 +55,5 @@ Route::resource('ordens_compra', 'PurchaseOrderController');
 
 Route::resource('nfs_compra', 'IncomingInvoiceController');
 
+Route::resource('produtos_comprados', 'PurchaseProductController');
+

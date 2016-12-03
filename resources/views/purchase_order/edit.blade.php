@@ -52,12 +52,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="incoming_invoices_id" class="col-sm-2 control-label">Nota fiscal:</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" name="incoming_invoices_id" value="{{ $purchaseOrder->incoming_invoices_id }}">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label for="status" class="col-sm-2 control-label">Estatus:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="status" value="{{ $purchaseOrder->status }}" maxlength="10" required>

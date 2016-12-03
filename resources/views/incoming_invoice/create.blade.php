@@ -14,6 +14,12 @@
                     <form method="POST" action="{{ url('nfs_compra') }}" class="form-horizontal">
                         {!! csrf_field() !!}
                         <div class="form-group">
+                            <label for="purchase_orders_id" class="col-sm-2 control-label">Nota fiscal:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" name="purchase_orders_id" value="{{ old('purchase_orders_id') }}" maxlength="32" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="number" class="col-sm-2 control-label">Número:</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" name="number" value="{{ old('number') }}" maxlength="32" required>

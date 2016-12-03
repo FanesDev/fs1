@@ -28,10 +28,10 @@ class PurchaseOrderFormRequest extends FormRequest
             'date_purchase_order'  => 'required|date',
             'delivery_date'        => 'required|date',
             'form_payment'         => 'required|min:3|max:20',
-            'total_value'          => 'required|max:20',
-            'incoming_invoices_id' => 'max:32',
+            'total_value'          => 'required',
             'status'               => 'required|min:3|max:20',
             'obs'                  => 'required|min:3|max:20',
         ];
     }
 }
+

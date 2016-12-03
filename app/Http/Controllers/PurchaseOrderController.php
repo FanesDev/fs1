@@ -42,7 +42,6 @@ class PurchaseOrderController extends Controller
         $purchaseOrder->delivery_date        = $request->get('delivery_date');
         $purchaseOrder->form_payment         = $request->get('form_payment');
         $purchaseOrder->total_value          = $request->get('total_value');
-        $purchaseOrder->incoming_invoices_id = $request->get('incoming_invoices_id');
         $purchaseOrder->status               = $request->get('status');
         $purchaseOrder->obs                  = $request->get('obs');
         $purchaseOrder->save();
@@ -88,7 +87,6 @@ class PurchaseOrderController extends Controller
         $purchaseOrder->delivery_date        = $request->get('delivery_date');
         $purchaseOrder->form_payment         = $request->get('form_payment');
         $purchaseOrder->total_value          = $request->get('total_value');
-        $purchaseOrder->incoming_invoices_id = $request->get('incoming_invoices_id');
         $purchaseOrder->status               = $request->get('status');
         $purchaseOrder->obs                  = $request->get('obs');
         $purchaseOrder->save();

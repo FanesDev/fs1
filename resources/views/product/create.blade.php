@@ -20,6 +20,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="unit_price" class="col-sm-2 control-label">Preço:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="unit_price" value="{{ old('unit_price') }}" maxlength="32" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="description" class="col-sm-2 control-label">Descrição:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="description" value="{{ old('description') }}" maxlength="80" required>
