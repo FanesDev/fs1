@@ -57,3 +57,5 @@ Route::resource('nfs_compra', 'IncomingInvoiceController');
 
 Route::resource('produtos_comprados', 'PurchaseProductController');
 
+Route::resource('estoque', 'StockController');
+

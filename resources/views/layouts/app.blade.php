@@ -95,6 +95,18 @@
                             </li>
 
                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    &nbsp Estoque<span class="caret"></span>
+                                </a>
+     
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/estoque') }}">Listagem</a></li>
+                                    <li><a href="{{ url('/entradas_estoque') }}">Entrada</a></li>
+                                    <li><a href="{{ url('/saidas_estoque') }}">Saída</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>

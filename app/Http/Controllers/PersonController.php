@@ -17,7 +17,7 @@ class PersonController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $people = Person::paginate(10);
+        $people = Person::orderBy('id')->paginate(10);
         return view('person.index')->with('people', $people);
     }
 
