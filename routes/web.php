@@ -59,3 +59,5 @@ Route::resource('produtos_comprados', 'PurchaseProductController');
 
 Route::resource('estoque', 'StockController');
 
+Route::resource('ordens_venda', 'SalesOrderController');
+

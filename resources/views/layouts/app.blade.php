@@ -73,10 +73,20 @@
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                                     <li><a href="{{ url('/fornecedores') }}">Fornecedores</a></li>
                                     <li><a href="{{ url('/produtos') }}">Produtos</a></li>
-                                    <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                     <li><a href="{{ url('/colaboradores') }}">Colaboradores</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    &nbsp Processos<span class="caret"></span>
+                                </a>
+                                    
+                                <ul class="dropdown-menu">
                                     <li><a href="{{ url('/ordens_compra') }}">Orderns de Compra</a></li>
+                                    <li><a href="{{ url('/ordens_venda') }}">Orderns de Venda</a></li>
                                     <li><a href="{{ url('/nfs_compra') }}">NFs de Compra</a></li>
+                                    <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                     <li><a href="{{ url('/produtos_comprados') }}">Produtos Comprados</a></li>
                                 </ul>
                             </li>
