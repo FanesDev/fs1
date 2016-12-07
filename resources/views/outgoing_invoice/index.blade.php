@@ -6,10 +6,10 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><b>Cadastro de NF de entrada</b></h3>
+                    <h3 class="panel-title"><b>Cadastro de NF de saída</b></h3>
                 </div>
                 <div class="panel-body">
-                    <a href="{{ url('nfs_entrada/create') }}" class="btn btn-success">Novo</a>
+                    <a href="{{ url('nfs_saida/create') }}" class="btn btn-success">Novo</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-condensed table-hover table-striped">
@@ -20,23 +20,23 @@
                             <th> &nbsp           </th>
                             <th> &nbsp           </th>
                         </tr>
-                        @foreach($incomingInvoices as $incomingInvoice)
+                        @foreach($outgoingInvoices as $outgoingInvoice)
                             <tr>
-                                <td>{{ $incomingInvoice->id }}</td>
-                                <td>{{ $incomingInvoice->number }}</td>
-                                <td>{{ $incomingInvoice->maturity }}</td>
+                                <td>{{ $outgoingInvoice->id }}</td>
+                                <td>{{ $outgoingInvoice->number }}</td>
+                                <td>{{ $outgoingInvoice->maturity }}</td>
                                 <td>
-                                    <a href="{{ url('nfs_entrada/'.$incomingInvoice->id) }}" class="btn btn-primary btn-xs">Exibir</a>
+                                    <a href="{{ url('nfs_saida/'.$outgoingInvoice->id) }}" class="btn btn-primary btn-xs">Exibir</a>
                                 </td>
                                 <td>
-                                    <a href="{{ url('nfs_entrada/'.$incomingInvoice->id.'/edit') }}" class="btn btn-warning btn-xs">Editar</a>
+                                    <a href="{{ url('nfs_saida/'.$outgoingInvoice->id.'/edit') }}" class="btn btn-warning btn-xs">Editar</a>
                                 </td>
                             </tr>
                         @endforeach
                     </table>
                 </div>
                 <!-- Controles de paginação. -->
-                <p>{!! $incomingInvoices->links() !!}</p>
+                <p>{!! $outgoingInvoices->links() !!}</p>
             </div>
         </div>
     </div>

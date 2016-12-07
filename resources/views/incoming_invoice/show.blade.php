@@ -11,19 +11,13 @@
                 </div>
                 
                 <div class="panel-body">
-                    <form method="POST" action="{{ url('nfs_compra/'.$incomingInvoice->id) }}" class="form-horizontal">
+                    <form method="POST" action="{{ url('nfs_entrada/'.$incomingInvoice->id) }}" class="form-horizontal">
                         {!! csrf_field() !!}
                         {{ method_field('DELETE') }}
                         <div class="form-group">
                             <label for="id" class="col-sm-2 control-label">ID:</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" name="id"  value="{{ $incomingInvoice->id }}" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="purchase_orders_id" class="col-sm-2 control-label">Nota fiscal:</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" name="purchase_orders_id" value="{{ $incomingInvoice->purchase_orders_id }}" readonly>
                             </div>
                         </div>
                         <div class="form-group">
@@ -40,7 +34,7 @@
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-danger">Excluir</button>
-                            <a href="{{ url('nfs_compra') }} " class="btn btn-default">Voltar</a>
+                            <a href="{{ url('nfs_entrada') }} " class="btn btn-default">Voltar</a>
                         </div>
                     </form>
                 </div>

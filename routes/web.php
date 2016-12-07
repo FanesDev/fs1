@@ -53,11 +53,13 @@ Route::resource('colaboradores', 'EmployeeController');
 
 Route::resource('ordens_compra', 'PurchaseOrderController');
 
-Route::resource('nfs_compra', 'IncomingInvoiceController');
+Route::resource('nfs_entrada', 'IncomingInvoiceController');
 
 Route::resource('produtos_comprados', 'PurchaseProductController');
 
 Route::resource('estoque', 'StockController');
 
 Route::resource('ordens_venda', 'SalesOrderController');
+
+Route::resource('nfs_saida', 'OutgoingInvoiceController');
 
