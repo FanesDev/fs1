@@ -44,9 +44,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="incoming_invoices_id" class="col-sm-2 control-label">Nota fiscal de venda:</label>
+                            <label for="outgoing_invoices_id" class="col-sm-2 control-label">Nota fiscal de saída:</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" name="incoming_invoices_id" value="{{ old('incoming_invoices_id') }}">
+                                <input type="number" class="form-control" name="outgoing_invoices_id" value="{{ old('outgoing_invoices_id') }}">
                             </div>
                         </div>
                         <div class="form-group">

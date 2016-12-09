@@ -73,6 +73,7 @@
                                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                                     <li><a href="{{ url('/fornecedores') }}">Fornecedores</a></li>
                                     <li><a href="{{ url('/produtos') }}">Produtos</a></li>
+                                    <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                     <li><a href="{{ url('/colaboradores') }}">Colaboradores</a></li>
                                 </ul>
                             </li>
@@ -87,8 +88,8 @@
                                     <li><a href="{{ url('/ordens_venda') }}">Orderns de Venda</a></li>
                                     <li><a href="{{ url('/nfs_entrada') }}">NFs de Entrada</a></li>
                                     <li><a href="{{ url('/nfs_saida') }}">NFs de Saída</a></li>
-                                    <li><a href="{{ url('/produtos_fornecidos') }}">Produtos Fornecidos</a></li>
                                     <li><a href="{{ url('/produtos_comprados') }}">Produtos Comprados</a></li>
+                                    <li><a href="{{ url('/produtos_vendidos') }}">Produtos Vendidos</a></li>
                                 </ul>
                             </li>
 

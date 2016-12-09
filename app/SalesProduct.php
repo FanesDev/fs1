@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SalesOrder extends Model
+class SalesProduct extends Model
 {
     public $timestamps = false;
 }
