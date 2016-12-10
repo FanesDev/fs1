@@ -65,3 +65,5 @@ Route::resource('nfs_saida', 'OutgoingInvoiceController');
 
 Route::resource('produtos_vendidos', 'SalesProductController');
 
+Route::resource('fluxo_caixa', 'CashFlowController');
+
