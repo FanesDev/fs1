@@ -21,9 +21,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="sales_orders_id" class="col-sm-2 control-label">Ordem de compra:</label>
+                            <label for="sales_order_id" class="col-sm-2 control-label">Ordem de compra:</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" name="sales_orders_id" value="{{ $salesProduct->sales_orders_id }}" readonly>
+                                <input type="number" class="form-control" name="sales_order_id" value="{{ $salesProduct->sales_order_id }}" readonly>
                             </div>
                         </div>
                         <div class="form-group">

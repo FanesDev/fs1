@@ -62,6 +62,27 @@
                                 <input type="text" class="form-control" name="obs" value="{{ $salesOrder->obs }}" readonly>
                             </div>
                         </div>
+
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover table-striped">
+                        <tr class="warning">
+                            <th> ID             </th>
+                            <th> Ordem de venda </th>
+                            <th> Produto        </th>
+                            <th> Preço de venda </th>
+                            <th> Quantidade     </th>
+                        </tr>
+                        @foreach($salesProducts as $salesProduct)
+                            <tr>
+                                <td>{{ $salesProduct->id }}</td>
+                                <td>{{ $salesProduct->sales_order_id }}</td>
+                                <td>{{ $salesProduct->products_id }}</td>
+                                <td>{{ $salesProduct->unit_sales_price }}</td>
+                                <td>{{ $salesProduct->quantity }}</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-danger">Excluir</button>
                             <a href="{{ url('ordens_venda') }} " class="btn btn-default">Voltar</a>

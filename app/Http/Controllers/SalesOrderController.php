@@ -58,8 +58,9 @@ class SalesOrderController extends Controller
      */
     public function show($id){
         $salesOrder = SalesOrder::findOrFail($id);
+        $salesProducts = SalesOrder::find($id)->detail;
 
-        return view('sales_order.show')->with('salesOrder', $salesOrder);
+        return view('sales_order.show')->with('salesOrder', $salesOrder)->with('salesProducts', $salesProducts);
     }
 
     /**

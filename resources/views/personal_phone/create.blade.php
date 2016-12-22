@@ -14,9 +14,9 @@
                     <form method="POST" action="{{ url('telefones_pessoais') }}" class="form-horizontal">
                         {!! csrf_field() !!}
                         <div class="form-group">
-                            <label for="people_id" class="col-sm-2 control-label">Pessoa:</label>
+                            <label for="person_id" class="col-sm-2 control-label">Pessoa:</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" name="people_id" value="{{ old('people_id') }}" maxlength="32" required>
+                                <input type="number" class="form-control" name="person_id" value="{{ old('person_id') }}" maxlength="32" required>
                             </div>
                         </div>
                         <div class="form-group">

@@ -25,7 +25,7 @@
                         @foreach($salesProducts as $salesProduct)
                             <tr>
                                 <td>{{ $salesProduct->id }}</td>
-                                <td>{{ $salesProduct->sales_orders_id }}</td>
+                                <td>{{ $salesProduct->sales_order_id }}</td>
                                 <td>{{ $salesProduct->products_id }}</td>
                                 <td>{{ $salesProduct->unit_sales_price }}</td>
                                 <td>{{ $salesProduct->quantity }}</td>

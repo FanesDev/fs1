@@ -8,14 +8,19 @@ class Person extends Model
 {
     public $timestamps = false;
 
-    public function clients(){
-        return $this->morphMany('App\Customer', 'client');
-    }
-
     const SEXES = [
         'M' => 'Masculino',
         'F' => 'Feminino',
     ];
+
+    public function personalPhones() {
+        return $this->hasMany('App\PersonalPhone');
+    }
+
+
+    public function customers(){
+        return $this->morphOne('App\Customer', 'customerable');
+    }
 
     /** 
      * Set the people first name.
@@ -24,7 +29,6 @@ class Person extends Model
      * @return void
      */
     public function setFirstNameAttribute($firstName){
-
         $this->attributes['first_name'] = ucfirst(strtolower($firstName));
     }
 
@@ -35,7 +39,6 @@ class Person extends Model
      * @return void
      */
     public function setLastNameAttribute($lastName){
-
         $this->attributes['last_name'] = ucfirst(strtolower($lastName));
 
     }
@@ -48,7 +51,6 @@ class Person extends Model
      * @return string
      */
     public function getCpfAttribute($cpf){
-
         $cpfFormated = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', $cpf);
 
         return $cpfFormated;
@@ -61,19 +63,23 @@ class Person extends Model
      * @return void
      */
     public function setCpfAttribute($cpf){
-
         $this->attributes['cpf'] = preg_replace('/[^0-9]/', '', $cpf);
 
     }
 
+    /** 
+     * Get the people SEX.
+     *
+     * @var  string  $sex
+     * @return string
+     */
     public function getSexFormatedAttribute(){
-
-        $sex = $this->sex;
+        $sex = $this->sex;//Necessário por sair da convenção.
 
         if ($sex === 'M'){
-            $sexFormated = Person::SEXES['M'];
+            $sexFormated = self::SEXES['M'];
         }elseif ($sex === 'F'){
-            $sexFormated = Person::SEXES['F'];
+            $sexFormated = self::SEXES['F'];
         }else {
             $sexFormated = 'Indefinido';
         }

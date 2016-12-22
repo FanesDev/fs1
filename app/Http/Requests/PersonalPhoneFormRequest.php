@@ -24,7 +24,7 @@ class PersonalPhoneFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'people_id'    => 'required|max:32',
+            'person_id'    => 'required|max:32',
             'phone_operator' => 'required|min:2|max:25',
             'ddd'      => 'required|min:2|max:2|
                 in:11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 

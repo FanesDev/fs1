@@ -25,7 +25,7 @@
                         @foreach($personalPhones as $personalPhone)
                             <tr>
                                 <td>{{ $personalPhone->id }}</td>
-                                <td>{{ $personalPhone->people_id }}</td>
+                                <td>{{ $personalPhone->person_id }}</td>
                                 <td>{{ $personalPhone->phone_operator }}</td>
                                 <td>{{ $personalPhone->ddd }}</td>
                                 <td>{{ $personalPhone->phone }}</td>

@@ -90,6 +90,7 @@
                                     <li><a href="{{ url('/nfs_saida') }}">NFs de Saída</a></li>
                                     <li><a href="{{ url('/produtos_comprados') }}">Produtos Comprados</a></li>
                                     <li><a href="{{ url('/produtos_vendidos') }}">Produtos Vendidos</a></li>
+                                    <li><a href="{{ url('/clientes_simplificado') }}">Clientes Simplificado</a></li>
                                 </ul>
                             </li>
 

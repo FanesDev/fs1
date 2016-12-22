@@ -22,9 +22,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="people_id" class="col-sm-2 control-label">Pessoa:</label>
+                            <label for="person_id" class="col-sm-2 control-label">Pessoa:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="people_id" value="{{ $personalPhone->people_id }}" maxlength="32" required>
+                                <input type="number" class="form-control" name="person_id" value="{{ $personalPhone->person_id }}" required>
                             </div>
                         </div>
                         <div class="form-group">

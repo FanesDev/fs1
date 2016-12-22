@@ -69,3 +69,5 @@ Route::resource('fluxo_caixa', 'CashFlowController');
 
 Route::resource('contas', 'BillController');
 
+Route::resource('clientes_simplificado', 'SimplifiedCustomerController');
+

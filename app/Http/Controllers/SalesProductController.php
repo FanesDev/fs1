@@ -16,7 +16,7 @@ class SalesProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $salesProducts = SalesProduct::paginate(10);
+        $salesProducts = SalesProduct::orderBy('id')->paginate(10);
         return view('sales_product.index')->with('salesProducts', $salesProducts);
     }
 
@@ -37,7 +37,7 @@ class SalesProductController extends Controller
      */
     public function store(SalesProductFormRequest $request){
         $salesProduct = new SalesProduct;
-        $salesProduct->sales_orders_id  = $request->get('sales_orders_id');
+        $salesProduct->sales_order_id  = $request->get('sales_order_id');
         $salesProduct->products_id      = $request->get('products_id');
         $salesProduct->unit_sales_price = $request->get('unit_sales_price');
         $salesProduct->quantity         = $request->get('quantity');
@@ -79,7 +79,7 @@ class SalesProductController extends Controller
      */
     public function update(SalesProductFormRequest $request, $id){
         $salesProduct = SalesProduct::findOrFail($id);
-        $salesProduct->sales_orders_id  = $request->get('sales_orders_id');
+        $salesProduct->sales_order_id  = $request->get('sales_order_id');
         $salesProduct->products_id      = $request->get('products_id');
         $salesProduct->unit_sales_price = $request->get('unit_sales_price');
         $salesProduct->quantity         = $request->get('quantity');

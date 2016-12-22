@@ -38,7 +38,7 @@ class PersonalPhoneController extends Controller{
      */
     public function store(PersonalPhoneFormRequest $request){
         $personalPhone = new PersonalPhone;
-        $personalPhone->people_id      = $request->get('people_id');
+        $personalPhone->person_id      = $request->get('person_id');
         $personalPhone->phone_operator = $request->get('phone_operator');
         $personalPhone->ddd            = $request->get('ddd');
         $personalPhone->phone          = $request->get('phone');
@@ -81,7 +81,7 @@ class PersonalPhoneController extends Controller{
      */
     public function update(PersonalPhoneFormRequest $request, $id){
         $personalPhone                 = PersonalContact::findOrFail($id);
-        $personalPhone->people_id      = $request->get('people_id');
+        $personalPhone->person_id      = $request->get('person_id');
         $personalPhone->phone_operator = $request->get('phone_operator');
         $personalPhone->ddd            = $request->get('ddd');
         $personalPhone->phone          = $request->get('phone');

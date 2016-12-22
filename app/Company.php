@@ -8,8 +8,8 @@ class Company extends Model
 {
     public $timestamps = false;
 
-    public function clients(){
-        return $this->morphMany('App\Customer', 'client');
+    public function customers(){
+        return $this->morphOne('App\Customer', 'customerable');
     }
 }
 

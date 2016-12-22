@@ -80,7 +80,7 @@ class PersonController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function update(PersonFormRequest $request, $id){
-        $person             = Person::findOrFail($id);
+        $person = Person::findOrFail($id);
         $person->first_name = $request->get('first_name');
         $person->last_name  = $request->get('last_name');
         $person->cpf        = $request->get('cpf');
